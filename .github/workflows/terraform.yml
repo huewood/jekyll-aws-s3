@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       domain_name:
-        description: The domain name for the website.
+        description: The root domain name for the website.
         required: true
         # Change to your domain name
-        default: testdomain.net
+        default: huewood.net
       region: 
         description: AWS Region to deploy resources.
         required: true
@@ -35,7 +35,7 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY}}
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
         aws-region: us-east-1
 
