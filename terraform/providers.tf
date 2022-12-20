@@ -11,7 +11,7 @@ terraform {
   # Region hard-coded to us-east-1 for S3 Terraform backup usage.
   backend "s3" {
     # Change to your backend bucket name
-    bucket = "testdomain-terraform"
+    bucket = "huewood-terraform"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
